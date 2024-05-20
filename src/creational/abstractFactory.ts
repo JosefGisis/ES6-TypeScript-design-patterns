@@ -4,6 +4,10 @@
 
 // Example using es6 features.
 
+// In this example we have a clothing factory that can create red or blue clothing.
+// It is important that all clothing products need to be the same color. Rather than managing that
+// in the client code, we can use an abstract factory to ensure that all products are the same color.
+
 type Shoes = 'red shoes' | 'blue shoes'
 type Shirt = 'red shirt' | 'blue shirt'
 type Pants = 'red pants' | 'blue pants'
