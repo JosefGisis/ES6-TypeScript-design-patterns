@@ -62,8 +62,8 @@ const exampleText = new ExampleText()
 const dunderDecorator = new DunderDecorator(exampleText)
 const dunderDunderDecorator = new DunderDecorator(dunderDecorator)
 const starDunderDunderDecorator = new StarDecorator(dunderDunderDecorator)
-console.log(starDunderDunderDecorator.getText()) // **__Hello World__**
+console.log(starDunderDunderDecorator.getText()) // **____Hello World____**
 
 const dunderStarDunderDunderDecorator = new DunderDecorator(starDunderDunderDecorator)
-console.log(dunderStarDunderDunderDecorator.getText()) // __**__Hello World__**__
+console.log(dunderStarDunderDunderDecorator.getText()) // __**____Hello World____**__
 // See. We can keep adding decorators to the component without changing the component itself.
