@@ -14,7 +14,7 @@ There is also a folder containing code as an example of SOLID design principles.
 
 ### What are design patterns?
 
-Design patterns describe a frequently occurring problem in object-oriented programming and provides a solution to that problem. By utilizing design patterns, applications become eminently more understandable, extensible, modifiable, and error resilient (pp. 2-3).
+Design patterns describe a frequently occurring problem in object-oriented programming and provide a solution to that problem. By utilizing design patterns, applications become eminently more understandable, extensible, modifiable, and error resilient (pp. 2-3).
 
 ### Design patterns outline some basic principles.
 
