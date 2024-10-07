@@ -1,5 +1,7 @@
 ## SOLID Design Principles
 
+This directory contains an interpreter for evaluating boolean expressions. It utilizes several design patterns (namely _interpreter_) while conforming to SOLID principles. If any design pattern requires violating SOLID principles, a note will specify the violation as part of the design pattern.
+
 The SOLID design principles provide a set of guidelines for creating extensible, modifiable, clear, and error resilient object-oriented code.
 
 #### S. Single Responsibility Principle

@@ -61,3 +61,5 @@ context.setStrategy(new RemoveWhiteSpaceCharacters())
 context.setString('Hello/sWorld')
 context.removeSpaces()
 console.log(context.getString())
+
+export {}
