@@ -8,8 +8,6 @@ The examples are contained within directories ordered by the design pattern's pu
 2. Structural: the way objects relate to each other.
 3. Behavioral: the way objects communicate with each other.
 
-There is also a folder containing code as an example of SOLID design principles.
-
 ---
 
 ### What are design patterns?

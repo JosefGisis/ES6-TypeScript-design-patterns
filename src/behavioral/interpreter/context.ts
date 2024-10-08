@@ -1,8 +1,14 @@
-import { isUpperCaseCharType, UpperCaseChar } from '../types'
+import { isUpperCaseCharType, UpperCaseChar } from './types.js'
 
 export const upperCaseABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-export default class Context {
+interface ContextInterface {
+	lookup(char: UpperCaseChar): boolean
+	assign(char: UpperCaseChar, value: boolean): void
+}
+
+// Context is a singleton.
+export default class Context implements ContextInterface {
 	public static instance: Context | null = null
 	private charMap = new Map<UpperCaseChar, boolean>()
 
@@ -22,10 +28,6 @@ export default class Context {
 			charMap.set(char, false)
 		}
 		this.charMap = charMap
-	}
-
-	public getCharMap(): typeof this.charMap {
-		return this.charMap
 	}
 
 	public lookup(char: UpperCaseChar): boolean {

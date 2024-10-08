@@ -2,12 +2,8 @@
  * See src/behavioral/interpreter.ts for an explanation of the interpreter design pattern.
  */
 
-import Context from '../context/context'
-import { UpperCaseChar } from '../types'
-import { BooleanConstantExpressionFlyweight, VariableExpressionFlyweight } from './flyweights'
-
-const variableExpressionFlyweight = VariableExpressionFlyweight.getInstance()
-const booleanConstantExpressionFlyweight = BooleanConstantExpressionFlyweight.getInstance()
+import Context from './context.js'
+import { UpperCaseChar } from './types.js'
 
 export abstract class BooleanExpression {
 	abstract evaluate(context: Context): boolean
@@ -15,6 +11,7 @@ export abstract class BooleanExpression {
 	abstract copy(): BooleanExpression
 }
 
+// Not all expression contain two operands, so we create a separate class for those that do.
 export abstract class AndAndOrExpression extends BooleanExpression {
 	protected operand1: BooleanExpression
 	protected operand2: BooleanExpression
@@ -91,11 +88,11 @@ export class VariableExpression extends BooleanExpression {
 		if (char === this.char) {
 			return expression.copy()
 		}
-		return variableExpressionFlyweight.getExpression(this.char)
+		return this
 	}
 
 	copy(): BooleanExpression {
-		return variableExpressionFlyweight.getExpression(this.char)
+		return this
 	}
 }
 
@@ -112,10 +109,10 @@ export class BooleanConstantExpression extends BooleanExpression {
 	}
 
 	replace(char: UpperCaseChar, expression: BooleanExpression): BooleanExpression {
-		return this.copy()
+		return this
 	}
 
 	copy(): BooleanExpression {
-		return booleanConstantExpressionFlyweight.getExpression(this.value)
+		return this
 	}
 }
