@@ -4,6 +4,8 @@ This repository contains practice examples for all 23 design patterns from "Desi
 
 Josef Gisis 10/16/2024
 
+---
+
 Design Patterns are divided into three categories:
 
 1. Creational: the way objects are created.
